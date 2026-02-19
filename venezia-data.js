@@ -231,9 +231,9 @@ const VENEZIA_OFFERTE = [
 // 👤 DATI AUTORE
 // ============================================
 const AUTORE = {
-    nome: 'Marco Rossi',
+    nome: 'Thebookinghack',
     foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80',
-    bio: 'Travel hacker italiano con 200+ giorni di viaggio all\'anno. Ho visitato Venezia più di 30 volte e conosco ogni trucco per risparmiare senza rinunciare alla qualità. Condivido solo offerte che ho testato personalmente.',
+    bio: 'Veneziano doc con la passione dei viaggi. Voglio cercare di aiutarvi a trovare soluzioni economiche per vivere venezia e le altre città del mondo',
     social: {
         instagram: 'https://instagram.com/thebookinghack',
         tiktok: 'https://tiktok.com/@thebookinghack',

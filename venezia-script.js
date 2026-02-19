@@ -40,35 +40,34 @@ function createCardHTML(offerta) {
     const isScaduta = offerta.scadenza && new Date(offerta.scadenza) < new Date();
     const scadenzaText = offerta.scadenza ? formattaScadenza(offerta.scadenza) : '';
     
-    // Badge categoria
-    const categoriaLabel = offerta.categoria.toUpperCase();
-    const categoriaIcon = getCategoriaIcon(offerta.categoria);
-    
     return `
         <article class="deal-card-venezia ${isScaduta ? 'scaduta' : ''}" data-category="${offerta.categoria}">
+            ${offerta.badge ? `<span class="deal-badge-venezia">${offerta.badge}</span>` : ''}
+            ${scadenzaText && !isScaduta ? `<span class="deal-scadenza">${scadenzaText}</span>` : ''}
+            ${sconto > 0 ? `<span class="deal-sconto">-${sconto}%</span>` : ''}
+            
             <div class="deal-image">
-                <span class="deal-categoria-badge">${categoriaIcon} ${categoriaLabel}</span>
-                ${scadenzaText && !isScaduta ? `<span class="deal-scadenza">${scadenzaText}</span>` : ''}
-                ${sconto > 0 ? `<span class="deal-sconto">-${sconto}%</span>` : ''}
                 <img src="${offerta.immagine}" alt="${offerta.titolo}" loading="lazy">
             </div>
             
             <div class="deal-content">
+                <span class="deal-categoria">${getCategoriaIcon(offerta.categoria)} ${capitalize(offerta.categoria)}</span>
                 <h3>${offerta.titolo}</h3>
                 <p>${offerta.descrizione}</p>
                 
-                <div class="deal-price-row">
-                    <span class="new-price">${offerta.prezzo}</span>
-                    <span class="old-price">${offerta.prezzoOriginale}</span>
+                <div class="deal-footer">
+                    <div class="deal-price-venezia">
+                        <span class="old-price">${offerta.prezzoOriginale}</span>
+                        <span class="new-price">${offerta.prezzo}</span>
+                    </div>
+                    <a href="${offerta.link}" 
+                       class="btn-deal ${isScaduta ? 'disabled' : ''}" 
+                       target="_blank" 
+                       rel="noopener"
+                       ${isScaduta ? 'onclick="return false;"' : ''}>
+                        ${isScaduta ? 'Scaduta' : 'Vedi Offerta →'}
+                    </a>
                 </div>
-                
-                <a href="${offerta.link}" 
-                   class="btn-deal ${isScaduta ? 'disabled' : ''}" 
-                   target="_blank" 
-                   rel="noopener"
-                   ${isScaduta ? 'onclick="return false;"' : ''}>
-                    ${isScaduta ? 'Scaduta' : 'Vedi Offerta'}
-                </a>
             </div>
         </article>
     `;
@@ -87,9 +86,9 @@ function formattaScadenza(dataString) {
     const diffGiorni = Math.ceil((scadenza - oggi) / (1000 * 60 * 60 * 24));
     
     if (diffGiorni < 0) return 'Scaduta';
-    if (diffGiorni === 0) return 'Scade oggi!';
-    if (diffGiorni === 1) return 'Scade domani!';
-    if (diffGiorni <= 7) return `Scade tra ${diffGiorni} giorni`;
+    if (diffGiorni === 0) return '⏰ Scade oggi!';
+    if (diffGiorni === 1) return '⏰ Scade domani!';
+    if (diffGiorni <= 7) return `⏰ Scade tra ${diffGiorni} giorni`;
     return '';
 }
 

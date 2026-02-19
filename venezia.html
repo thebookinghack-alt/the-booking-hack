@@ -70,7 +70,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#offerte-venezia">Offerte</a></li>
-                <li><a href="#autore">Chi Sono</a></li>
+                <li><a href="#chi-sono">Chi Sono</a></li>
                 <li><a href="#newsletter" class="btn-primary">Iscriviti</a></li>
             </ul>
         </nav>
@@ -80,20 +80,43 @@
     <section class="hero venezia-hero">
         <div class="container">
             <div class="hero-content">
-                <h1>🏛️ Offerte Venezia</h1>
-                <p class="hero-subtitle">Food, Trasporti, Hotel e Attività — tutto al miglior prezzo</p>
-                <span class="hero-badge">A Project by TheBookingHack</span>
+                <h1>Venezia <span class="highlight">Low Cost</span></h1>
+                <p class="hero-subtitle">Scopri come visitare la città più romantica del mondo spendendo la metà. Hotel, trasporti, food e attività scontate fino al 60%.</p>
+                
+                <!-- Quick Stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15€</span>
+                        <span class="stat-label">Gondola condivisa</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">57€</span>
+                        <span class="stat-label">Hotel 3★ centro</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">22€</span>
+                        <span class="stat-label">Tour bacari</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#offerte-venezia" class="btn-primary btn-large">Vedi le Offerte</a>
+                    <a href="#calcolatore-venezia" class="btn-secondary btn-large">Calcola Risparmio</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Filtri Categorie -->
-    <section id="offerte-venezia" class="filters-section">
+    <section id="offerte-venezia" class="strategies">
         <div class="container">
+            <h2>Offerte Venezia 2025</h2>
+            <p class="section-subtitle">Filtra per categoria e trova il miglior affare per il tuo viaggio</p>
+            
             <!-- Filter Buttons -->
             <div class="filter-buttons" role="group" aria-label="Filtra offerte">
                 <button class="filter-btn active" data-filter="all" onclick="filterDeals('all')">
-                    🏛️ Tutte
+                    📋 Tutte
                 </button>
                 <button class="filter-btn" data-filter="food" onclick="filterDeals('food')">
                     🍷 Food
@@ -127,7 +150,7 @@
     <section id="calcolatore-venezia" class="calculator-section">
         <div class="container">
             <h2>Quanto costa Venezia?</h2>
-            <div class="calculator venezia-calc">
+            <div class="calculator">
                 <div class="calc-inputs">
                     <div class="input-group">
                         <label>Notti a Venezia</label>
@@ -166,17 +189,17 @@
         </div>
     </section>
 
-    <!-- Profilo Autore -->
-    <section id="autore" class="author-section">
+    <!-- Chi Sono -->
+    <section id="chi-sono" class="strategies" style="background: var(--gray-50);">
         <div class="container">
+            <h2>Chi c'è dietro</h2>
             <div class="author-card">
-                <div class="author-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Marco Rossi - Travel Hacker">
+                <div class="author-logo">
+                    <img src="logo.png" alt="The Booking Hack" width="120">
                 </div>
                 <div class="author-content">
-                    <span class="author-badge">✍️ Curato da</span>
-                    <h3>Marco Rossi</h3>
-                    <p class="author-bio">Travel hacker italiano con 200+ giorni di viaggio all'anno. Ho visitato Venezia più di 30 volte e conosco ogni trucco per risparmiare senza rinunciare alla qualità. Condivido solo offerte che ho testato personalmente.</p>
+                    <h3>The Booking Hack</h3>
+                    <p class="author-bio">Veneziano doc, appassionato di viaggi. Sono anni che viaggio spendendo pochi euro, esplorando il mondo con intelligenza e cercando sempre il miglior rapporto qualità-prezzo. Ora voglio condividere con voi tutti i trucchi e le offerte che scovo, per farvi risparmiare su ogni viaggio. Da Venezia al mondo, viaggiare bene non deve costare una fortuna!</p>
                     
                     <!-- Social Links -->
                     <div class="author-social">

@@ -1304,29 +1304,25 @@ ul {
 }
 
 .author-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
   margin: 0 auto;
   background: var(--white);
   border-radius: var(--radius-xl);
-  padding: 2rem;
+  padding: 3rem 2rem;
   box-shadow: var(--shadow);
 }
 
-.author-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
+.author-logo {
+  margin-bottom: 1.5rem;
 }
 
-.author-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.author-logo img {
+  height: 80px;
+  width: auto;
 }
 
 .author-content {

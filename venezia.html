@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezia Low Cost 2025 | Offerte Hotel, Trasporti, Food - The Booking Hack</title>
+    <meta name="description" content="Scopri le migliori offerte per Venezia: hotel scontati, gondole low cost, bacari economici e tour delle isole. Risparmia fino al 60% sulla tua visita a Venezia.">
+    <meta name="keywords" content="venezia low cost, offerte venezia, hotel venezia economici, gondola prezzo, bacari venezia">
+    <link rel="canonical" href="https://thebookinghack.it/venezia.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thebookinghack.it/venezia.html">
+    <meta property="og:title" content="Venezia Low Cost 2025 | Offerte Hotel, Trasporti, Food">
+    <meta property="og:description" content="Hotel scontati, gondole low cost, bacari economici. Risparmia fino al 60% a Venezia!">
+    <meta property="og:image" content="https://thebookinghack.it/images/venezia-og.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAction",
+      "name": "Venezia Low Cost - Offerte Viaggi",
+      "description": "Offerte per visitare Venezia spendendo meno",
+      "location": {
+        "@type": "City",
+        "name": "Venezia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Venezia",
+          "addressCountry": "IT"
+        }
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "15",
+        "highPrice": "120",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizziamo cookie per migliorare la tua esperienza. <a href="#privacy">Privacy Policy</a></p>
+            <button onclick="acceptCookies()" class="cookie-btn">Accetta</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="The Booking Hack" height="40">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#offerte-venezia">Offerte</a></li>
+                <li><a href="#autore">Chi Sono</a></li>
+                <li><a href="#newsletter" class="btn-primary">Iscriviti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Venezia -->
+    <section class="hero venezia-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🏛️ Offerte Venezia</h1>
+                <p class="hero-subtitle">Food, Trasporti, Hotel e Attività — tutto al miglior prezzo</p>
+                <span class="hero-badge">A Project by TheBookingHack</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtri Categorie -->
+    <section id="offerte-venezia" class="filters-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" role="group" aria-label="Filtra offerte">
+                <button class="filter-btn active" data-filter="all" onclick="filterDeals('all')">
+                    🏛️ Tutte
+                </button>
+                <button class="filter-btn" data-filter="food" onclick="filterDeals('food')">
+                    🍷 Food
+                </button>
+                <button class="filter-btn" data-filter="trasporti" onclick="filterDeals('trasporti')">
+                    🚤 Trasporti
+                </button>
+                <button class="filter-btn" data-filter="dormire" onclick="filterDeals('dormire')">
+                    🏨 Dormire
+                </button>
+                <button class="filter-btn" data-filter="attivita" onclick="filterDeals('attivita')">
+                    🎭 Attività
+                </button>
+            </div>
+            
+            <!-- Deals Grid -->
+            <div class="deals-grid" id="dealsGrid">
+                <!-- Le offerte vengono caricate da JavaScript -->
+            </div>
+            
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <span class="empty-icon">🔍</span>
+                <h3>Nessuna offerta trovata</h3>
+                <p>Prova a selezionare un'altra categoria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calcolatore Venezia -->
+    <section id="calcolatore-venezia" class="calculator-section">
+        <div class="container">
+            <h2>Quanto costa Venezia?</h2>
+            <div class="calculator venezia-calc">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label>Notti a Venezia</label>
+                        <input type="number" id="veneziaNights" value="2" min="1" max="7" onchange="calcolaVenezia()">
+                    </div>
+                    <div class="input-group">
+                        <label>Numero persone</label>
+                        <input type="number" id="veneziaPeople" value="2" min="1" max="6" onchange="calcolaVenezia()">
+                    </div>
+                    <div class="input-group">
+                        <label>Stagione</label>
+                        <select id="veneziaStagione" onchange="calcolaVenezia()">
+                            <option value="bassa">Bassa (Nov-Mar)</option>
+                            <option value="media" selected>Media (Apr-Giu, Set-Ott)</option>
+                            <option value="alta">Alta (Lug-Ago, festività)</option>
+                        </select>
+                    </div>
+                    <button onclick="calcolaVenezia()" class="btn-primary btn-full">
+                        🔄 Aggiorna Calcolo
+                    </button>
+                </div>
+                <div class="calc-results venezia-results">
+                    <div class="savings-display">
+                        <span class="savings-amount" id="veneziaTotal">€0</span>
+                        <span class="savings-label">Costo stimato totale</span>
+                    </div>
+                    <ul class="savings-breakdown" id="veneziaBreakdown">
+                        <!-- Populated by JS -->
+                    </ul>
+                    <div class="savings-highlight">
+                        <span>💰 Risparmio con le nostre offerte: </span>
+                        <strong id="veneziaSavings">€0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profilo Autore -->
+    <section id="autore" class="author-section">
+        <div class="container">
+            <div class="author-card">
+                <div class="author-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Marco Rossi - Travel Hacker">
+                </div>
+                <div class="author-content">
+                    <span class="author-badge">✍️ Curato da</span>
+                    <h3>Marco Rossi</h3>
+                    <p class="author-bio">Travel hacker italiano con 200+ giorni di viaggio all'anno. Ho visitato Venezia più di 30 volte e conosco ogni trucco per risparmiare senza rinunciare alla qualità. Condivido solo offerte che ho testato personalmente.</p>
+                    
+                    <!-- Social Links -->
+                    <div class="author-social">
+                        <a href="https://instagram.com/thebookinghack" target="_blank" rel="noopener" class="social-btn instagram">
+                            📸 Instagram
+                        </a>
+                        <a href="https://tiktok.com/@thebookinghack" target="_blank" rel="noopener" class="social-btn tiktok">
+                            🎵 TikTok
+                        </a>
+                        <a href="https://t.me/thebookinghack" target="_blank" rel="noopener" class="social-btn telegram">
+                            ✈️ Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Ricevi offerte Venezia in anteprima</h2>
+                <p>Unisciti a 50,000+ viaggiatori. Le migliori offerte per Venezia direttamente nella tua email.</p>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="La tua email" required class="newsletter-input">
+                    <button type="submit" class="btn-primary">Iscriviti Gratis</button>
+                </form>
+                <p class="form-note">✓ Disiscriviti in qualsiasi momento. Leggi la nostra <a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="logo.png" alt="The Booking Hack" height="35">
+                    </a>
+                    <p>La community italiana per viaggiare spendendo meno. Strategie testate, offerte verificate.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Link Utili</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#cookie">Cookie Policy</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Seguici</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/thebookinghack" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+                        <a href="https://t.me/thebookinghack" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
+                        <a href="https://tiktok.com/@thebookinghack" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Booking Hack. Tutti i diritti riservati.</p>
+                <p class="affiliate-note">Questo sito contiene link di affiliazione.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="venezia-data.js"></script>
+    <script src="venezia-script.js"></script>
+</body>
+</html>

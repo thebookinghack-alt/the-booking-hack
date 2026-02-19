@@ -232,7 +232,7 @@ const VENEZIA_OFFERTE = [
 // ============================================
 const AUTORE = {
     nome: 'Thebookinghack',
-    foto: '<a href='https://postimg.cc/xX9tRjdH' target='_blank'><img src='https://i.postimg.cc/xX9tRjdH/thebookinghacknologo.png' border='0' alt='thebookinghacknologo'></a>',
+    foto: 'https://i.postimg.cc/xX9tRjdH/thebookinghacknologo.png',
     bio: 'Veneziano doc con la passione dei viaggi. Voglio cercare di aiutarvi a trovare soluzioni economiche per vivere venezia e le altre città del mondo',
     social: {
         instagram: 'https://instagram.com/thebookinghack',

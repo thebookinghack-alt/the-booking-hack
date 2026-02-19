@@ -408,7 +408,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // ============================================
 const AUTORE = {
     nome: 'Thebookinghack',
-    foto: 'https://i.postimg.cc/xX9tRjdH/thebookinghacknologo.png',
+    foto: 'https://i.postimg.cc/8z69TjQy/thebookinghacknologo.png',
     bio: 'Veneziano doc con la passione dei viaggi. Voglio cercare di aiutarvi a trovare soluzioni economiche per vivere venezia e le altre città del mondo',
     social: {
         instagram: 'https://instagram.com/thebookinghack',

@@ -6,6 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- ============================================
+         IUBENDA COOKIE BANNER - GDPR Compliant
+         ============================================ -->
+    <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+        "siteId": 16198169,
+        "cookiePolicyId": 16198169,
+        "lang": "it",
+        "storage": {"useSiteId": true},
+        "banner": {
+            "position": "bottom",
+            "acceptButtonDisplay": true,
+            "customizeButtonDisplay": true,
+            "rejectButtonDisplay": true,
+            "closeButtonDisplay": false,
+            "backgroundColor": "#ffffff",
+            "textColor": "#1f2937",
+            "acceptButtonColor": "#3b82f6",
+            "acceptButtonCaptionColor": "#ffffff",
+            "rejectButtonColor": "#e5e7eb",
+            "rejectButtonCaptionColor": "#374151",
+            "fontSize": "14px"
+        },
+        "callback": {
+            "onConsentGiven": function() {
+                console.log("Consent given");
+            }
+        }
+    };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/16198169.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    
+    <!-- ============================================
          SEO META TAGS - Ottimizzati
          ============================================ -->
     <title>The Booking Hack | Risparmia fino al 40% su Hotel e Voli</title>
@@ -49,11 +83,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- ============================================
-         SCHEMA.ORG JSON-LD - Rich Snippets
-         ============================================ -->
-    
-    <!-- Organization Schema -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -76,149 +106,10 @@
       }
     }
     </script>
-    
-    <!-- WebSite Schema (Sitelinks Searchbox) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "The Booking Hack",
-      "url": "https://thebookinghack.it",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://thebookinghack.it/cerca?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <!-- WebPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "The Booking Hack - Risparmia sulle Prenotazioni",
-      "description": "Scopri come risparmiare fino al 40% su hotel e voli con strategie testate e offerte verificate.",
-      "url": "https://thebookinghack.it/",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home"
-        }]
-      },
-      "mainEntity": {
-        "@type": "Service",
-        "name": "Consulenza Risparmio Viaggi",
-        "provider": {
-          "@type": "Organization",
-          "name": "The Booking Hack"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Italy"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Servizi di Risparmio",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Calcolatore Risparmio Hotel"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Newsletter Offerte Esclusive"
-              }
-            }
-          ]
-        }
-      }
-    }
-    </script>
-    
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Quanto posso risparmiare con The Booking Hack?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "I nostri utenti risparmiano in media il 25-40% sulle prenotazioni di hotel e voli, applicando le strategie che condividiamo. Il risparmio totale della nostra community ha superato i 2.4 milioni di euro."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Le offerte sono verificate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sì, tutte le offerte che pubblichiamo sono verificate dal nostro team prima di essere condivise. Controlliamo disponibilità, condizioni e validità per garantirti solo affari reali."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "È gratis iscriversi alla newsletter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Assolutamente sì! La newsletter di The Booking Hack è completamente gratuita. Riceverai le migliori offerte direttamente nella tua email senza alcun costo."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- SoftwareApplication Schema (per il Calcolatore) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Calcolatore Risparmio Viaggi",
-      "applicationCategory": "TravelApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "50000"
-      }
-    }
-    </script>
 </head>
 <body>
     <!-- Skip Link per accessibilità -->
     <a href="#main-content" class="sr-only">Vai al contenuto principale</a>
-    
-    <!-- ============================================
-         COOKIE BANNER - GDPR Compliant
-         ============================================ -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Informativa cookie">
-        <div class="cookie-content">
-            <p>Utilizziamo cookie tecnici e di profilazione per migliorare la tua esperienza. 
-               <a href="#privacy" rel="nofollow">Privacy Policy</a> | 
-               <a href="#cookie" rel="nofollow">Cookie Policy</a>
-            </p>
-            <button onclick="acceptCookies()" class="cookie-btn" aria-label="Accetta tutti i cookie">
-                Accetta
-            </button>
-        </div>
-    </div>
     
     <!-- ============================================
          HEADER & NAVIGATION
@@ -438,15 +329,6 @@
                     <h2 id="newsletter-title">Ricevi le migliori offerte prima degli altri</h2>
                     <p>Unisciti a 50,000+ viaggiatori. Nessuno spam, solo affari veri.</p>
                     
-                    <!-- FORMSPREE FORM - Funzionante -->
-                    <!-- 
-                        ISTRUZIONI per attivare Formspree:
-                        1. Vai su https://formspree.io/
-                        2. Registrati gratis
-                        3. Crea un nuovo form
-                        4. Copia l'endpoint (es: https://formspree.io/f/xnqkvpzy)
-                        5. Sostituisci YOUR_FORM_ID in script.js
-                    -->
                     <form class="newsletter-form" 
                           onsubmit="handleSubscribe(event)"
                           aria-label="Iscrizione newsletter">
@@ -465,7 +347,8 @@
                     
                     <p class="form-note" id="email-help">
                         ✓ Disiscriviti in qualsiasi momento. Leggi la nostra 
-                        <a href="#privacy" rel="nofollow">Privacy Policy</a>
+                        <a href="https://www.iubenda.com/privacy-policy/16198169" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a>
+                        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                     </p>
                 </div>
             </div>
@@ -474,7 +357,7 @@
     </main>
     
     <!-- ============================================
-         FOOTER
+         FOOTER - Link Iubenda completi
          ============================================ -->
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -487,9 +370,15 @@
                 <nav class="footer-links" aria-label="Link utili">
                     <h4>Link Utili</h4>
                     <ul>
-                        <li><a href="#privacy" rel="nofollow">Privacy Policy</a></li>
-                        <li><a href="#cookie" rel="nofollow">Cookie Policy</a></li>
-                        <li><a href="#termini" rel="nofollow">Termini di Servizio</a></li>
+                        <li>
+                            <a href="https://www.iubenda.com/privacy-policy/16198169" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="https://www.iubenda.com/privacy-policy/16198169/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a href="https://www.iubenda.com/termini-e-condizioni/16198169" class="iubenda-black iubenda-noiframe iubenda-embed" title="Termini e Condizioni">Termini di Servizio</a>
+                        </li>
                         <li><a href="#contatti" rel="nofollow">Contatti</a></li>
                     </ul>
                 </nav>
@@ -528,20 +417,11 @@
         </div>
     </footer>
     
+    <!-- Script Iubenda per il footer -->
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    
     <!-- Scripts -->
     <script src="script.js" defer></script>
     
-    <!-- 
-    ============================================
-    GOOGLE ANALYTICS 4 - Sostituire con il tuo ID
-    ============================================
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
 </body>
 </html>

@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <!-- Strategie Section (lasciata come era) -->
+    <!-- Strategie Section -->
     <section id="strategie" class="strategies">
         <div class="container">
             <h2>Strategie di Risparmio</h2>
@@ -95,7 +95,35 @@
         </div>
     </section>
 
-    <!-- Footer aggiornato con tua bio -->
+    <!-- Offerte Section - Collegata a Google Sheets -->
+    <section id="offerte" class="deals">
+        <div class="container">
+            <h2>Offerte del Momento</h2>
+            <div id="deals-grid" class="deals-ticker">
+                <!-- Le offerte da Google Sheets appariranno qui automaticamente -->
+                <p style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: #666;">
+                    Caricamento offerte in corso da Google Sheets...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Ricevi le migliori offerte prima degli altri</h2>
+                <p>Unisciti alla community. Nessun spam, solo offerte vere.</p>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="La tua email" required class="newsletter-input">
+                    <button type="submit" class="btn-primary">Iscriviti Gratis</button>
+                </form>
+                <p class="form-note">✓ Puoi disiscriverti in qualsiasi momento</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con bio -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

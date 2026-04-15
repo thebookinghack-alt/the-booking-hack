@@ -4,115 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venezia Low Cost 2025 | Offerte Hotel, Trasporti, Food - The Booking Hack</title>
-    <meta name="description" content="Scopri le migliori offerte per Venezia: hotel scontati, gondole low cost, bacari economici e tour delle isole. Risparmia fino al 60% sulla tua visita a Venezia.">
+    <meta name="description" content="Scopri le migliori offerte per Venezia: hotel scontati, gondole low cost, bacari economici e tour delle isole.">
     <meta name="keywords" content="venezia low cost, offerte venezia, hotel venezia economici, gondola prezzo, bacari venezia">
     <link rel="canonical" href="https://thebookinghack.it/venezia.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thebookinghack.it/venezia.html">
-    <meta property="og:title" content="Venezia Low Cost 2025 | Offerte Hotel, Trasporti, Food">
-    <meta property="og:description" content="Hotel scontati, gondole low cost, bacari economici. Risparmia fino al 60% a Venezia!">
-    <meta property="og:image" content="https://thebookinghack.it/images/venezia-og.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- Fonts & Styles -->
+
+    <!-- GOOGLE ANALYTICS 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-010L9W3GZQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
+      gtag('js', new Date());
+      gtag('config', 'G-010L9W3GZQ');
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="The Booking Hack" height="40">
-            </a>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#offerte-venezia">Offerte</a></li>
-                <li><a href="#chi-sono">Chi Sono</a></li>
-                <li><a href="#newsletter" class="btn-primary">Iscriviti</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Venezia (invariato) -->
-    <section class="hero venezia-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Venezia <span class="highlight">Low Cost</span></h1>
-                <p class="hero-subtitle">Scopri come visitare la città più romantica del mondo spendendo la metà. Hotel, trasporti, food e attività scontate fino al 60%.</p>
-                <div class="hero-cta">
-                    <a href="#offerte-venezia" class="btn-primary btn-large">Vedi le Offerte</a>
-                    <a href="#calcolatore-venezia" class="btn-secondary btn-large">Calcola Risparmio</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offerte Venezia (invariato) -->
-    <section id="offerte-venezia" class="strategies">
-        <div class="container">
-            <h2>Offerte Venezia 2025</h2>
-            <p class="section-subtitle">Filtra per categoria e trova il miglior affare per il tuo viaggio</p>
-            <div class="filter-buttons" role="group" aria-label="Filtra offerte">
-                <button class="filter-btn active" data-filter="all" onclick="filterDeals('all')">📋 Tutte</button>
-                <button class="filter-btn" data-filter="food" onclick="filterDeals('food')">🍷 Food</button>
-                <button class="filter-btn" data-filter="trasporti" onclick="filterDeals('trasporti')">🚤 Trasporti</button>
-                <button class="filter-btn" data-filter="dormire" onclick="filterDeals('dormire')">🏨 Dormire</button>
-                <button class="filter-btn" data-filter="attivita" onclick="filterDeals('attivita')">🎭 Attività</button>
-            </div>
-            <div class="deals-grid" id="dealsGrid"></div>
-            <div class="empty-state" id="emptyState" style="display:none;">
-                <span class="empty-icon">🔍</span>
-                <h3>Nessuna offerta trovata</h3>
-                <p>Prova a selezionare un'altra categoria</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calcolatore, Chi Sono, Newsletter invariati -->
-    <!-- ... (stessi contenuti originali) ... -->
-
-    <!-- Newsletter -->
-    <section id="newsletter" class="newsletter">
-        <div class="container">
-            <div class="newsletter-box">
-                <h2>Ricevi offerte Venezia in anteprima</h2>
-                <p>Unisciti a 50,000+ viaggiatori. Le migliori offerte per Venezia direttamente nella tua email.</p>
-                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
-                    <input type="email" placeholder="La tua email" required class="newsletter-input">
-                    <button type="submit" class="btn-primary">Iscriviti Gratis</button>
-                </form>
-                <p class="form-note">
-                    ✓ Disiscriviti in qualsiasi momento. Leggi la nostra 
-                    <a href="https://www.iubenda.com/privacy-policy/16198169" target="_blank" rel="noopener">Privacy Policy</a>
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- Header, Hero, Offerte, Calcolatore, Chi Sono, Newsletter (copia dal tuo file originale) -->
 
     <!-- FOOTER con Iubenda -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <img src="logo.png" alt="The Booking Hack" height="35">
-                    </a>
-                    <p>La community italiana per viaggiare spendendo meno. Strategie testate, offerte verificate.</p>
+                    <a href="index.html" class="logo"><img src="logo.png" alt="The Booking Hack" height="35"></a>
+                    <p>La community italiana per viaggiare spendendo meno.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Link Utili</h4>
+                <nav class="footer-links">
+                    <h4>Link Legali</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="https://www.iubenda.com/privacy-policy/16198169" target="_blank" rel="noopener">Privacy Policy</a></li>
-                        <li><a href="https://www.iubenda.com/privacy-policy/16198169/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-body-embed" title="Cookie Policy">Cookie Policy</a></li>
+                        <li><a href="https://www.iubenda.com/privacy-policy/16198169" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="https://www.iubenda.com/privacy-policy/16198169/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></li>
+                        <li><a href="https://www.iubenda.com/termini-e-condizioni/16198169" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Termini e Condizioni">Termini e Condizioni</a></li>
                     </ul>
-                </div>
+                </nav>
                 <div class="footer-social">
                     <h4>Seguici</h4>
                     <div class="social-links">
@@ -133,18 +60,9 @@
     <script src="venezia-data.js"></script>
     <script src="venezia-script.js"></script>
 
-    <!-- IUBENDA SCRIPT -->
-    <script type="text/javascript">
-        (function (w,d) {
-            var loader = function () {
-                var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-                s.src="https://cdn.iubenda.com/iubenda.js";
-                tag.parentNode.insertBefore(s,tag);
-            };
-            if(w.addEventListener){w.addEventListener("load", loader, false);}
-            else if(w.attachEvent){w.attachEvent("onload", loader);}
-            else{w.onload = loader;}
-        })(window, document);
-    </script>
+    <!-- IUBENDA SCRIPTS -->
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const VENEZIA_OFFERTE = [
-    // Inserisci qui le tue offerte reali dal foglio Google Sheets
+    // Incolla qui le tue offerte dal Google Sheets
 ];
 
 const VENEZIA_PREZZI = {
@@ -8,7 +8,3 @@ const VENEZIA_PREZZI = {
     trasporti: { vaporetto: 25, gondola: 15 },
     attivita: { min: 15, max: 40 }
 };
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { VENEZIA_OFFERTE, VENEZIA_PREZZI };
-}

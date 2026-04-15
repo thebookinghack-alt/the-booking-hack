@@ -1,10 +1,10 @@
 /**
  * THE BOOKING HACK - Script Unificato
- * Versione 2.1 - Pulito con Iubenda
+ * Versione 2.3 - GA4 + Iubenda Ready
  */
 
 const CONFIG = {
-  FORMSPREE_ENDPOINT: 'https://formspree.io/f/YOUR_FORM_ID',  // ← Cambia con il tuo
+  FORMSPREE_ENDPOINT: 'https://formspree.io/f/YOUR_FORM_ID', // ← Cambia con il tuo
   
   SAVINGS_RATES: {
     europa: { hotel: 0.25, voli: 0.20, bundle: 0.35 },
@@ -38,7 +38,7 @@ function initMobileMenu() {
 }
 
 // ============================================
-// CALCOLATORE
+// CALCOLATORE RISPARMIO
 function calculateSavings() {
   const destination = document.getElementById('destination')?.value || 'europa';
   const nights = parseInt(document.getElementById('nights')?.value) || 3;
@@ -70,10 +70,12 @@ function calculateSavings() {
       </li>
     `;
   }
+  
+  trackEvent('calculator_used', { destination, nights, budget, savings: totalSavings });
 }
 
 function animateCounter(element, start, end, duration, prefix = '') {
-  let startTime = performance.now();
+  const startTime = performance.now();
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
@@ -89,16 +91,65 @@ function animateCounter(element, start, end, duration, prefix = '') {
 // FORM NEWSLETTER
 async function handleSubscribe(event) {
   event.preventDefault();
-  // ... (codice originale invariato - Formspree) ...
-  // (puoi tenere la versione che avevi prima)
+  const form = event.target;
+  const emailInput = form.querySelector('input[type="email"]');
+  const submitBtn = form.querySelector('button');
+  const email = emailInput?.value?.trim();
+
+  if (!email) return showNotification('Inserisci un email valida', 'error');
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Iscrizione in corso...';
+  }
+
+  try {
+    if (CONFIG.FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
+      await new Promise(r => setTimeout(r, 1200));
+      showNotification('✅ Iscrizione completata!', 'success');
+    } else {
+      const res = await fetch(CONFIG.FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'newsletter' })
+      });
+      if (res.ok) showNotification('✅ Iscrizione completata!', 'success');
+    }
+    form.reset();
+    trackEvent('newsletter_subscribe');
+  } catch (e) {
+    showNotification('❌ Errore durante l\'iscrizione', 'error');
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Iscriviti Gratis';
+    }
+  }
 }
 
 // ============================================
-// ALTRE FUNZIONI (lazy loading, smooth scroll, ecc.)
-// ... (tutto il resto del tuo script.js originale rimane invariato) ...
+// NOTIFICHE
+function showNotification(message, type = 'info') {
+  const notif = document.createElement('div');
+  notif.style.cssText = `position:fixed;top:90px;right:20px;padding:1rem 1.5rem;border-radius:8px;color:white;z-index:10000;animation:slideIn 0.3s; background:${type==='success'?'#10b981':type==='error'?'#ef4444':'#0ea5e9'};`;
+  notif.innerHTML = `<span>${message}</span><button onclick="this.parentElement.remove()" style="margin-left:10px;background:none;border:none;color:white;cursor:pointer;">✕</button>`;
+  document.body.appendChild(notif);
+  setTimeout(() => notif.remove(), 5000);
+}
 
+// ============================================
+// GA4 TRACKING
+function trackEvent(eventName, data = {}) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, data);
+  }
+  console.log('[GA4]', eventName, data);
+}
+
+// ============================================
+// INIZIALIZZAZIONE
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   calculateSavings();
-  console.log('🚀 The Booking Hack - v2.1 Loaded with Iubenda');
+  console.log('🚀 The Booking Hack - v2.3 Loaded with GA4 + Iubenda');
 });

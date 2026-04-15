@@ -1,19 +1,7 @@
-/**
- * ============================================
- * 🏛️ DATI OFFERTE VENEZIA - TheBookingHack
- * ============================================
- * 
- * ✅ TUTTI I DATI INVENTATI SONO STATI RIMOSSI
- * Usa Google Sheets per aggiungere le tue offerte reali
- * (vedi GUIDA_SHEETS.md o TEMPLATE_SHEETS.md)
- */
-
 const VENEZIA_OFFERTE = [
-    // ← Inserisci qui le tue offerte reali dal foglio Google
+    // Inserisci qui le tue offerte reali dal foglio Google Sheets
 ];
 
-// ============================================
-// 📊 DATI CALCOLATORE VENEZIA (mantenuti perché generici)
 const VENEZIA_PREZZI = {
     hotel: { bassa: 45, media: 70, alta: 120 },
     food: { bassa: 25, media: 35, alta: 50 },

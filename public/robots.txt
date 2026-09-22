@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /desk
+Disallow: /stato
+Disallow: /lancia
+Sitemap: https://thebookinghack.com/sitemap.xml

@@ -1,0 +1,12 @@
+# Non usare questo file come se il sito fosse statico.
+# The Booking Hack è TanStack Start / Nitro pensato per Vercel.
+# Deploy: GitHub → Vercel (vedi DEPLOY.md).
+# Se in futuro passi a Netlify, serve il preset Nitro "netlify" in vite.config
+# e va aggiornata la privacy iubenda (oggi dichiara Vercel).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
